@@ -1,15 +1,20 @@
-import { useState } from "react";
-import "./App.css";
-import ClassInput from "./components/ClassInput";
+import React, { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
+  const [heading, setHeading] = useState("Magnificent Monkeys");
+
+  const clickHandler = () => {
+    setHeading("Radical Rhinos");
+  };
 
   return (
     <>
-      <ClassInput />
+      <button type="button" onClick={clickHandler}>
+        Click Me
+      </button>
+      <h1>{heading}</h1>
     </>
   );
-}
+};
 
 export default App;
