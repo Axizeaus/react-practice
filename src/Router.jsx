@@ -4,19 +4,19 @@ import Profile from "./Profile";
 import ErrorPage from "./ErrorPage";
 
 const Router = () => {
-    const router = createBrowserRouter([
-        {
-            path: '/',
-            element: <App />
-            errorElement: <ErrorPage />
-        },
-        {
-            path: "profile/:name"
-            element: <Profile />
-        }
-    ])
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <App />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "profile/:name",
+      element: <Profile />,
+    },
+  ]);
 
-    return <RouterProvider router={router} />
-}
+  return <RouterProvider router={router} />;
+};
 
-export default Router
+// export default Router;
